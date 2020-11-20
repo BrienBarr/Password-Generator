@@ -24,7 +24,6 @@ function generatePassword() {
   // the user accidentally clicks the generate password button
   if (passwordText.value === newPassword){    
     var oldPassword = passwordText.value;
-    console.log(oldPassword);
   }
   // User input via confirms and prompts
   var confirm1 = confirm("Do you want to generate a new password?");
@@ -114,12 +113,10 @@ function generatePassword() {
     // If the number of characters entered in the prompt is out of the range
     else if(characters < 8 || characters > 128){
       passwordText.value = "The number of characters you chose for your password is outside of the range.\n\Click the button below to generate a new password.";
-      // return(passwordText.value);
     }
 
     // If the user cancels the password generator when prompted to enter the number of characters
     else{
-      // newPassword = "Click the button below to generate a new password.";
       passwordText.value = oldPassword;
       newPassword = "";
       return(newPassword);
@@ -129,8 +126,6 @@ function generatePassword() {
 
   // If the user cancels the password generator when asked to confirm creation of the password
   else{
-    console.log(newPassword);
-    // newPassword = "Click the button below to generate a new password.";
     passwordText.value = oldPassword;
     newPassword = "";
     return(newPassword);
