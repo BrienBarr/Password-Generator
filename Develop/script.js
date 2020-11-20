@@ -120,7 +120,8 @@ function generatePassword() {
     // If the user cancels the password generator when prompted to enter the number of characters
     else{
       // newPassword = "Click the button below to generate a new password.";
-      passwordText.value = newPassword;
+      passwordText.value = oldPassword;
+      newPassword = "";
       return(newPassword);
     }
 
@@ -131,6 +132,7 @@ function generatePassword() {
     console.log(newPassword);
     // newPassword = "Click the button below to generate a new password.";
     passwordText.value = oldPassword;
+    newPassword = "";
     return(newPassword);
   }
 
