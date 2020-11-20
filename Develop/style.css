@@ -135,3 +135,23 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 394px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 364px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+}
