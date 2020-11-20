@@ -19,8 +19,6 @@ var possibleCharacters = [
 
 // Function to generate the password
 function generatePassword() { 
-  
-  
 
   // If the password text area contains a password, store the value to a variable in case 
   // the user accidentally clicks the generate password button
