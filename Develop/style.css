@@ -1,9 +1,11 @@
+/* Styling for all elements */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Styling for html, body element, and wrapper class */
 html,
 body,
 .wrapper {
@@ -12,17 +14,20 @@ body,
   padding: 0;
 }
 
+/* Styling for body element */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* Styling for wrapper class */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Styling for header element */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +35,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Styling for card class */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +48,7 @@ header {
   padding: 30px 40px;
 }
 
+/* Styling for card-header class pseudo-element after */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,14 +57,17 @@ header {
   height: 2px;
 }
 
+/* Styling for card-body class */
 .card-body {
   min-height: 100px;
 }
 
+/* Styling for card-footer class */
 .card-footer {
   text-align: center;
 }
 
+/* Styling for card-footer class pseudo-element before*/
 .card-footer::before {
   content: " ";
   display: block;
@@ -66,12 +76,14 @@ header {
   height: 2px;
 }
 
+/* Styling for card-footer class pseudo-element after*/
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* Styling for btn class (button) */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -88,15 +100,18 @@ header {
   cursor: pointer;
 }
 
+/* Styling for button pseudo element for disabled attributes */
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
+/* Styling for float-right class */
 .float-right {
   float: right;
 }
 
+/* Styling for elements with password id */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +133,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* @media queries for small screens that are no larger than 690 pixels */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,12 +146,14 @@ button[disabled] {
   }
 }
 
+/* @media queries for small screens that are no larger than 500 pixels */
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
   }
 }
 
+/* @media queries for small screens that are no larger than 394 pixels */
 @media (max-width: 394px) {
   h1 {
     font-size: 1.5rem;
@@ -146,6 +164,7 @@ button[disabled] {
   }
 }
 
+/* @media queries for small screens that are no larger than 364 pixels */
 @media (max-width: 364px) {
   h1 {
     font-size: 1.2rem;
