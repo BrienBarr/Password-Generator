@@ -124,7 +124,6 @@ function generatePassword() {
 
     // If the user cancels the password generator when prompted to enter the number of characters
     else{
-      console.log(userMessage);
       // If the password text area text is the user message
       if (passwordText.value === userMessage){
         userMessage = "";
@@ -141,7 +140,6 @@ function generatePassword() {
 
   // If the user cancels the password generator when asked to confirm creation of the password
   else{
-    console.log(userMessage);
     // If the password text area text is the user message
     if (passwordText.value === userMessage){
       userMessage = "";
