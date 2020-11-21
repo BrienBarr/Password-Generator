@@ -126,6 +126,7 @@ function generatePassword() {
     else{
       // If the password text area text is the user message
       if (passwordText.value === userMessage){
+        userMessage = "";
         return userMessage;
       }
       // Else return the old password
@@ -141,6 +142,7 @@ function generatePassword() {
   else{
     // If the password text area text is the user message
     if (passwordText.value === userMessage){
+      userMessage = "";
       return userMessage;
     }
     // Else return the old password
