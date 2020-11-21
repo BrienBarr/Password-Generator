@@ -7,6 +7,12 @@ var passwordText = document.querySelector("#password");
 // Declare the new password variable
 var newPassword = "";
 
+// Declare the variable to store the previously generated password
+var oldPassword = "";
+
+// Declare the variable to store a message
+var userMessage = "";
+
 // Create variable of posible characters
 var possibleCharacters = [
   ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
@@ -23,7 +29,7 @@ function generatePassword() {
   // If the password text area contains a password, store the value to a variable in case 
   // the user accidentally clicks the generate password button
   if (passwordText.value === newPassword){    
-    var oldPassword = passwordText.value;
+    oldPassword = newPassword;
   }
   // User input via confirms and prompts
   var confirm1 = confirm("Do you want to generate a new password?");
@@ -89,8 +95,8 @@ function generatePassword() {
 
         // If the user chooses not to include any characters in the password
         else if (confirm3 === false && confirm4 === false && confirm5 === false && confirm6 === false){
-          newPassword = "You did not choose to include any characters in your password.\n\Click the button below to generate a new password.";
-          return(newPassword);
+          userMessage = "You did not choose to include any characters in your password.\n\Click the button below to generate a new password.";
+          return userMessage;
         }
 
         // If the random index is of an array that is not to be included in the password, repeat the for loop
@@ -105,31 +111,29 @@ function generatePassword() {
       //End of for loop
       }
         
-      return(newPassword);
+      return newPassword;
       
     // End of if statement
     }
 
     // If the number of characters entered in the prompt is out of the range
     else if(characters < 8 || characters > 128){
-      passwordText.value = "The number of characters you chose for your password is outside of the range.\n\Click the button below to generate a new password.";
-      return(passwordText.value);
+      userMessage = "The number of characters you chose for your password is outside of the range.\n\Click the button below to generate a new password.";
+      return userMessage;
     }
 
     // If the user cancels the password generator when prompted to enter the number of characters
     else{
-      passwordText.value = oldPassword;
       newPassword = "";
-      return(newPassword);
+      return oldPassword;
     }
 
   }
 
   // If the user cancels the password generator when asked to confirm creation of the password
   else{
-    passwordText.value = oldPassword;
     newPassword = "";
-    return(newPassword);
+    return oldPassword;
   }
 
 // End of function
