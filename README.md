@@ -33,6 +33,6 @@ The following image shows the web application's appearance and functionality:
 
 ![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## Live Dem
+## Live Demo
 
 [View the working application here!](https://brienbarr.github.io/Password-Generator/Develop/)
